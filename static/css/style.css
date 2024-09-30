@@ -10,21 +10,50 @@ body {
     color: #aaa;
     padding: 20px;
 }
-.container {
-    max-width: 800px;
+
+/* Wrapper to contain both the menu and content */
+.wrapper {
+    display: flex;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+/* Menu styles */
+.menu {
+    background-color: #333;
+    padding: 20px;
+    width: 200px; /* Set width for the menu */
+    border-radius: 18px;
+    margin-right: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    color: #fff;
+}
+
+/* Main content (container) styles */
+.container {
+    flex: 1; /* This allows the container to take the remaining space */
     background-color: #444;
     padding: 20px;
     border-radius: 18px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-}
-.list-container{
-    max-width: 250px;
-    margin: 10px;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 18px;
 }
 
 h1 {
