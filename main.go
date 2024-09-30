@@ -9,10 +9,15 @@ import (
 func renderTemplate(w http.ResponseWriter, tmpl string) {
     t, err := template.ParseFiles("templates/" + tmpl + ".html")
     if err != nil {
+        log.Printf("Error loading template %s: %v", tmpl, err) // More detailed logging
         http.Error(w, "Unable to load template", http.StatusInternalServerError)
         return
     }
-    t.Execute(w, nil)
+    err = t.Execute(w, nil)
+    if err != nil {
+        log.Printf("Error executing template %s: %v", tmpl, err) // Logging execution errors
+        http.Error(w, "Unable to render template", http.StatusInternalServerError)
+    }
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
