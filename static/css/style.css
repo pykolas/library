@@ -1,17 +1,50 @@
-/* static/css/style.css */
-body {
-    font-family: Arial, sans-serif;
+body, h1, p {
     margin: 0;
-    padding: 20px;
-}
-h1 {
-    color: #333;
-}
-nav ul {
-    list-style-type: none;
     padding: 0;
 }
-nav li {
-    display: inline;
-    margin-right: 15px;
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #222;
+    color: #aaa;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.list-container{
+    max-width: 250px;
+    margin: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 18px;
+}
+
+h1 {
+    text-align: center;
+    color: #aaa;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: #666;
+    padding: 10px 20px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: #fff
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
 }
